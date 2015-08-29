@@ -1,0 +1,209 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv theme
+\moderncvtheme[grey]{classic}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% page margin
+\usepackage[scale=0.8]{geometry}
+\usepackage{textcomp}
+
+% personal data
+\firstname{Jishnu Mohan}
+\familyname{}
+\address{Navaneetham, Pollethai P.O,}{688567, Alappuzha, Kerala, India}
+\mobile{+91 9895 86 85 18}
+\phone{+91 4782 86 41 71}
+\email{jishnu7@gmail.com}
+\homepage{j15h.nu}
+%\photo[64pt]{picture}
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+\begin{document}
+\maketitle
+
+
+\section {Personal Information}
+    \cvline{Date of Birth}{14 Nov, 1989}
+    \cvline{Sex}{Male}
+    %\cvline{Work Experience}{3{\textonehalf} years as Software Engineer.}
+
+\section{Education}
+    \cventry{2007 -- 2011}{Bachelors degree in Information Technology}{MES College of Engineering}{}{}{University of Calicut, Kerala, India}
+
+\section{Technical skills}
+    \cvcomputer{Languages / APIs / Tools}
+           {Javascript, Python, PHP, MySQL, HTML/HTML5, CSS/CSS3, Shell Scripting, Node, Less}
+           {\textbf{Version Control}: }
+           {Git, Subversion, bzr}
+
+    \cvcomputer{Authoring \& Graphics }
+           {{\LaTeX}, {\LaTeX} Beamer, LibreOffice/OpenOffice, Gimp, Inkscape, Blender, Adobe Photoshop, Adobe Flash}
+           {\textbf{CMS \& Frameworks}: }
+           {Drupal, Wordpress, Flask, Codeigniter, Backbone.js, Undersscore.js, GameClosure, Memacached, mocha.js, jsio, express.js}
+
+    \cvcomputer{Languages / APIs / Tools - Familiar: }
+           {C, C++, Android App development, Lua}{}{}
+
+    \cvline{Platforms}{GNU/Linux (Arch linux, Debian, Ubuntu \& Fedora)}
+
+%\pagebreak
+
+\section{Work Experience}
+    \cventry{2012 Nov -- Till date}{Hashcube Technologies}{Software Engineer}{\small{\url{http://hashcube.com}}}{}{
+      %\cvline{}{}
+      %\cvline{Project}{\textbf{Bubble Quest (Working title)}}
+      %\cvline{}{Bubble Quest is a casual puzzle game. \newline Working as engineering lead and handling 9 resources.}
+      %\cvline{Duration}{2014 August - till date}
+      %\cvline{Technologies}{Javascript, GameClosure, Node}
+      %\cvline{}{}
+      %\cvline{Project}{\textbf{Sudoku Quest Mobile}}
+      %\cvline{}{Worked as software developer in rewriting Sudoku Quest for iOS and Android. \newline \url{http://sudokuquest.com/}}
+      %\cvline{Duration}{2013 March - till date}
+      %\cvline{Technologies}{Javascript, GameClosure, Java, PHP}
+      %\cvline{}{}
+      %\cvline{Project}{\textbf{Sudoku Quest}}
+      %\cvline{}{Sudoku Quest is the most popular sudoku game on facebook.\newline Worked as software developer, managing front-end as well as the back-end. \newline \url{https://apps.facebook.com/sudokuquest/}}
+      %\cvline{Duration}{2012 November - till date}
+      %\cvline{Technologies}{PHP, Javascript, HTML, CSS, Less}
+      %\cvline{}{}
+      %\cvline{Project}{\textbf{Dot Game}}
+      %\cvline{}{Redesgined the UI and worked as software developer, managing \newline front-end as well as the backend. \newline \url{https://apps.facebook.com/connectdots/}}
+      %\cvline{Duration}{2012 November - till date}
+      %\cvline{Technologies}{PHP, Javascript, HTML, CSS, Less}
+    }
+    \cventry{2012 April -- 2012 Oct}{Accel Frontline (Ushus Tech division)}{Software Engineer Trainee}{}{\newline\small{\url{http://ushustech.com}}}{
+      %\cvline{}{}
+      %\cvline{Project}{\textbf{DLNA Media Player}}
+      %\cvline{}{Goal of the project was to build an android media player with \newline the support for DLNA streaming. Worked as software developer in this project.}
+      %\cvline{Duration}{2012 June - 2012 October}
+      %\cvline{Technologies}{Java}
+      %\cvline{}{}
+      %\cvline{Project}{\textbf{Pulse Audio}}
+      %\cvline{}{Worked as software developer to cross compile pulse audio for \newline an embedded device.}
+      %\cvline{Duration}{2012 April - 2012 June}
+      %\cvline{Technologies}{C, Bash script}
+    }
+    \cventry{2011 Aug -- 2012 Feb}{Ubiqurio}{Software Engineer}{\small{\url{http://ubiqurio.com}}}{}{
+      %\cvline{}{}
+       %\cvline{Project}{\textbf{IndiaVibes.tv}}
+       %\cvline{}{Worked as web developer in building a portal for puzzle based \newline online contest conducted by IndiaVibes.tv.}
+       %\cvline{Duration}{2011 Aug - 2011 Sep}
+       %\cvline{Technologies}{PHP, Javascript, HTML, CSS}
+       %\cvline{}{}
+       %\cvline{Project}{\textbf{Logobake.com}}
+       %\cvline{}{Worked as web developer in building web portal to create vector logos.}
+       %\cvline{Duration}{2011 Aug - 2012 Feb}
+       %\cvline{Technologies}{PHP, Javascript, HTML, CSS}
+    }
+
+\pagebreak
+
+\section{Personal Projects}
+    \cvline{Title}{\textbf{Indic Keyboard}}
+    \cvline{}{\small Indian language input method for Android devices. Started as free time project,
+      later ICFOSS (International Centre for Free and Open Source Software, Govt. of Kerala) supported the project for intial release.
+      Currently this has more than 160,000 downloads.
+    }
+    \cvline{Language}{Java, XML}
+    \cvline{Year}{2013 Jan - till date}
+    \cvline{Website}{\small{\url{https://play.google.com/store/apps/details?id=org.smc.inputmethod.indic}}}
+    \cvline{Source}{\small{\url{https://github.com/smc/Indic-Keyboard}}}
+
+    \cvline{Title}{\textbf{SMS Attendance}}
+    \cvline{}{\small Daily attendance SMS alert for MES College of Engineering students. During the period when project was active, it had more than 2300 registered users (out of 2700 students).}
+    \cvline{Language}{Python, PHP, MySQL}
+    \cvline{Year}{2010 August - 2011 April}
+    \cvline{Website}{\small{\url{http://attendance.thecodecracker.com/}}}
+    \cvline{Source}{\small{\url{http://github.com/jishnu7/SMSAttendance}}}
+
+    \cvline{Title}{\textbf{Unicalbot}}
+    \cvline{}{\small Twitterbot to tweet updates from University of Calicut website. The bot checks for notifications, exam results and tweets about it.}
+    \cvline{Language}{Python, Twitter API}
+    \cvline{Year}{2011 May - 2011 December}
+    \cvline{Website}{\small{\url{http://unical.thecodecracker.com/}}}
+    \cvline{Source}{\small{\url{http://github.com/jishnu7/Unical-Notifier}}}
+
+    \cvline{Title}{\textbf{Yet Another 2048}}
+    \cvline{}{\small Popular web based puzzle game 2048, re-written and optimized for mobile.}
+    \cvline{Language}{Javascript}
+    \cvline{Year}{2014 Feb - 2014 April}
+    \cvline{Website}{\small{\url{https://play.google.com/store/apps/details?id=in.androidtweak.twozerofoureight}}}
+    \cvline{Source}{\small{\url{https://github.com/jishnu7/Yet-Another-2048}}}
+
+%\pagebreak
+
+    \cvline{Title}{\textbf{DeskWiki Editor}}
+    \cvline{}{\small A desktop client to edit MediaWiki websites. MediaWiki is a free and open source wiki software. Goal of this project was to provide offline editting.}
+    \cvline{Year}{2011 Jan - 2011 April}
+    \cvline{Language}{Python, GTK, MediaWiki API}
+    \cvline{Source code}{\small{\url{https://code.launchpad.net/deskwiki}}}
+
+    \cvline{Title}{\textbf{Blender Add-Ons}}
+    \cvline{}{\small Developed a set of blender add-ons for architects. Blender is a free open source 3D content creation suite. Integrated library }
+    \cvline{Language}{Python, Blender API}
+    \cvline{Year}{2010 Oct - 2010 December}
+    \cvline{Source code}{\small{\url{https://github.com/jishnu7/Solid-Wall, https://github.com/jishnu7/Integrated-Library}}}
+
+    \cvline{Title}{\textbf{Publish Your Bookmarks}}
+    \cvline{}{\small Simple tool to publish Firefox bookmarks as a webpage.}
+    \cvline{Language}{PHP, Javascript, CSS}
+    \cvline{Year}{2012 November - 2012 December}
+    \cvline{Source code}{\small{\url{https://github.com/jishnu7/publish-your-bookmarks}}}
+
+
+\section{Free/Libre/OpenSource Software Contributions}
+    \cvline{Title}{\textbf{Silpa}}
+    \cvline{}{Silpa is a web based language processing framework for Indian languages. Contributed to multiple modules and to the silpa server.}
+    \cvline{Language}{Python, Javascript}
+    \cvline{Website}{\small{\url{http://silpa.org.in}}}
+
+    \cvline{Title}{\textbf{Game Closure}}
+    \cvline{}{Javascript based cross platform game engine. Fixed multiple bugs and reported several issues.}
+    \cvline{Language}{Javascript}
+    \cvline{Website}{\small{\url{https://github.com/gameclosure}}}
+
+    \cvline{Title}{\textbf{CyanogenMod}}
+    \cvline{}{CyanogenMod is an android based open source replacement firmware for smart phones and tablets. Contributed to the input method of the project.}
+    \cvline{Language}{Java / XML}
+    \cvline{Website}{\small{\url{http://www.cyanogenmod.org/}}}
+
+%\pagebreak
+
+    \cvline{Title}{\textbf{jquery.i18n}}
+    \cvline{}{jQuery based internationalization library. Fixed bugs in this project.}
+    \cvline{Language}{Javascript}
+    \cvline{Website}{\small{\url{https://github.com/wikimedia/jquery.i18n}}}
+
+    \cvline{Title}{\textbf{jquery.ime}}
+    \cvline{}{jQuery based input method editor library. Fixed several bugs in this project.}
+    \cvline{Language}{Javascript}
+    \cvline{Website}{\small{\url{https://github.com/wikimedia/jquery.ime}}}
+
+    \cvline{}{Others}
+    \cvline{GNOME Localization}{\small{\url{http://l10n.gnome.org}}}
+    \cvline{SMC Fonts}{\small{\url{https://github.com/smc/fonts}}}
+    \cvline{Devkit Helper}{\small{\url{https://github.com/hashcube/DevkitHelper}}}
+    \cvline{Debian diaspora progressbar}{\small{\url{https://gitorious.org/debian-diaspora/progressbar}}}
+    \cvline{Askbot}{\small{\url{http://askbot.org}}}
+
+
+\section{Activities \& Achievements}
+    \cvline{*}{\textbf{Google Summer of Code} (GSOC) Mentor - 2013 and 2014. \newline
+      Attended GSOC Mentors summit, San Jose, California October 2014.}
+    \cvline{*}{\textbf{SMS Attendance} and \textbf{Indic Keyboard} featured on national dailies, Deccan Chronicle, The Hindu, Times of India, Indian Express, Malayala Manorama and Mathrubhumi.}
+    \cvline{*}{\textbf{Indic Keyboard} ranked \#1 in India, Saudi Arabia and UAE on top new free tools list.}
+    \cvline{*}{DeskWiki was one of the 100+ selected applications in the \textbf{Ubuntu App Showdown} contest.}
+
+\section{Blogs \& Social Media}
+    \cvline{Github}{\url{http://github.com/jishnu7}}
+    \cvline{Behance}{\url{https://www.behance.net/jishnu7}}
+    \cvline{Personal/tech}{\url{http://blog.thecodecracker.com}}
+    \cvline{Android blog}{\url{http://androidtweak.in}}
+
+
+\end{document}
