@@ -10,9 +10,24 @@
 \usepackage[scale=0.8]{geometry}
 \usepackage{textcomp}
 
+% date calculation
+\usepackage{datenumber,fp}
+
+\def\Plus{\texttt{+}}
+
+% calculate years of experience
+\newcounter{dateone}%
+\newcounter{datetwo}%
+\setmydatenumber{dateone}{2011}{08}{01}%
+\setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
+\FPsub\result{\thedatetwo}{\thedateone}
+\FPdiv\YExperience{\result}{365.2425}
+\FPtrunc\YExperience{\YExperience}{0}
+
 % personal data
 \firstname{Jishnu}
 \familyname{Mohan}
+\title{Software Engineer with \YExperience \Plus { } years of experience.}
 \mobile{+91 9895 86 85 18}
 \email{jishnu7@gmail.com}
 \homepage{j15h.nu}
