@@ -1,165 +1,321 @@
-\documentclass[11pt,a4paper]{moderncv}
+% Template taken from : Aras Gungore (https://github.com/arasgungore/arasgungore-CV)
+\documentclass[letterpaper,11pt]{article}
 
-% moderncv theme
-\moderncvtheme[grey]{classic}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
 
-% character encoding
-\usepackage[utf8]{inputenc}
 
-% page margin
-\usepackage[scale=0.8]{geometry}
-\usepackage{textcomp}
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-% date calculation
-\usepackage{datenumber,fp}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
-\def\Plus{\texttt{+}}
 
-% calculate years of experience
-\newcounter{dateone}%
-\newcounter{datetwo}%
-\setmydatenumber{dateone}{2011}{08}{01}%
-\setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
-\FPsub\result{\thedatetwo}{\thedateone}
-\FPdiv\YExperience{\result}{365.2425}
-\FPtrunc\YExperience{\YExperience}{0}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% personal data
-\firstname{Jishnu}
-\familyname{Mohan}
-\title{Staff Software Engineer with \YExperience \Plus { } years of experience.}
-\mobile{+91 9895 86 85 18}
-\email{resume@jishnu.xyz}
-\homepage{j15h.nu}
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\link}[2]{
+  \emph{\href{#1}{\color{blue}#2}}
+}
+
+\newcommand{\projectlink}[2]{
+  \href{#1}{#2}
+}
+
+\newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize\color{gray}Last updated on #1}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
-\maketitle
 
-\section{Technical skills}
-    \cvcomputer{Languages / APIs / Tools}
-           {Javascript, Python, PHP, MySQL, HTML/HTML5, CSS/CSS3, SCSS, Shell Scripting, Node, Less, MongoDB}
-           {\textbf{Version Control}: }
-           {Git, Subversion, bzr}
+%---------- HEADING ----------
 
-    \cvline{CMS \& Frameworks}
-           {Flask, React, React-Native, Redux, Webpack, Vue.js, Backbone.js, GameClosure, Memcached, Mocha.js, jsio, Express.js, AngularJS, Babel, Amazon Alexa, Drupal, Wordpress, Ghost, Codeigniter}
+\begin{center}
+    \textbf{\Huge \sffamily\mdseries\upshape Jishnu Mohan} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:9895868518}{+91 9895 868 518}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:resume@jishnu.xyz}{resume@jishnu.xyz}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/jishnu7}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/jishnu7}{GitHub}
+    $|$
+    \faGlobe \hspace{.5pt} \href{https://j15h.nu}{Portfolio}
+\end{center}
 
-    \cvcomputer{Languages / APIs / Tools - Familiar: }
-           {C, C++, Android App development, Lua, Objective C, iOS app development, Java, Debian Packaging, Arch Linux packaging}
-           {\textbf{Platforms}: }
-           {GNU/Linux (Arch Linux, Debian, Ubuntu \& Fedora), AWS, Heroku, OpenShift, Google Cloud}
+
+
+%----------- EDUCATION -----------
 
 \section{Education}
-    \cventry{2007 -- 2011}{Bachelors degree in Information Technology}{MES College of Engineering}{}{}{University of Calicut, Kerala, India}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeEducationHeading
+      {MES College of Engineering
+      }{University of Calicut, Kerala, India}
+      {Bachelors degree in Information Technology}{2017 \textbf{--} 2011}
+      \resumeSubHeadingListEnd
 
-\pagebreak
+%----------- SKILLS -----------
 
-\section{Professional Work Experience}
-    \cventry{2019 Apr -- Till date}{Forma (Formerly known as Twic)}{Staff Software Engineer}{\small{Company based in Fremont, CA - Working as a fulltime Remote employee}}{\small{\url{http://joinforma.com}}}{
-      \begin{itemize}
-        \item Fintech company working on Employee benefits space.
-        \item Implemented SAML IdP and configure SSO with third party service providers.
-        \item Key role in standardizing code quality, coding standards and developer tools to enforce the standards.
-        \item React based frontend work on employee portal and several internal frontend and backend projects.
-        \item Picked up features, worked on design documents, test plan, backend code work, frontend code and managed till deployment and testing.
-        \item Worked on all parts of the code base, company wide.
-        \item Worked on Google Cloud App engine, Firebase, AWS ElasticBeanstalk.
-        \item Worked on backend infrastructure and possibility of having VPC and VPN interconnecting Google Cloud, AWS and Mongo Atlas.
-        \item Built initial version of React native based mobile app.
-      \end{itemize}
-    }
-    \cventry{2016 Dec -- 2019 Mar}{Tarobites}{Software Engineer}{\small{San Francisco, CA - Remote employee}}{\small{\url{http://tarobites.com}}}{
-      \begin{itemize}
-        \item Worked on tarobites.com customer facing website, backend APIs, chef web interface, admin web interface and mobile apps.
-        \item Food tech company based in bay area.
-        \item Was working on initial versions of the frontend with Angular.JS
-        \item Lead role in fully rewrite of cosumer facing frontend with React.JS
-        \item Worked on key internal projects, backend, operations help and frontend code.
-        \item Worked on all parts of the code base, company wide.
-      \end{itemize}
-    }
-    \cventry{2012 Nov -- 2016 Dec}{Hashcube Technologies}{Software Engineer \& Team Lead}{\small{Bangalore, India}}{\small{\url{http://hashcube.com}}}{
-      \begin{itemize}
-        \item Built \#1 Sudoku game - Sudoku Quest on Facebook platform with PHP based backend, Backbone.JS based frontend
-        \item Handled deployment of games on company's own managed server on AWS.
-        \item Worked on Dotgame, another popular game from the company - handled UI rewrite and player rankings.
-        \item Built mobile versions of the games with GameClosure engine.
-        \item Managed release processes on both Android and iOS.
-        \item Contributed bugfixes and features back to the open source GameClosure game engine.
-        \item Created native modules for iOS and android with Objective-C and Java with native APIs.
-        \item Improved performance of the games on low RAM devices with code written on C/C++ and Javascript code optimization.
-        \item Lead engineering team and key decision making role for the new game Gummy Pop.
-        \item Managed engineering team of 8 people.
-        \item Worked on Alexa skill with python based backend and AWS ElasticBeanstalk.
-      \end{itemize}
-    }
-    \cventry{2012 April -- 2012 Oct}{Accel Frontline (Ushus Tech division)}{Software Engineer Trainee}{\small{Kochi, India}}{}{}
-    \cventry{2011 Aug -- 2012 Feb}{Ubiqurio}{Software Engineer}{\small{Kochi, India}}{}{}
-
-\pagebreak
-\section{Selected Personal Projects}
-    \cvline{}{\textbf{Indic Keyboard}}
-    \cvline{}{\small MOSS (Mozilla Open Source Support) award winning Indian language input method for Android devices with more than \textbf{3 Million} downloads.
-    }
-    \cvline{}{\small{Web - \url{https://indic.app} | Source - \url{https://j15h.nu/source/keyboard}}}
-
-    \cvline{}{\textbf{Yet Another 2048}}
-    \cvline{}{\small Popular web based puzzle game 2048, re-written and optimized for mobile.}
-    \cvline{}{\small{Web - \url{https://j15h.nu/2048} | Source - \url{https://j15h.nu/source/2048}}}
-
-    \cvline{}{\textbf{DeskWiki Editor}}
-    \cvline{}{\small A desktop client to edit MediaWiki websites.}
-    \cvline{}{\small{Source - \url{https://j15h.nu/source/wiki}}}
-
-    \cvline{}{\textbf{AppRank.in}}
-    \cvline{}{\small A website which tracks Google Play app rankings.}
-    \cvline{}{\small{Web - \url{https://apprank.in}}}
-
-    \cvline{}{\textbf{SMS Attendance}}
-    \cvline{}{\small Daily attendance SMS alert for MES College of Engineering students. During the period when project was active, it had more than 2300 registered users (out of 2700 students).}
-    \cvline{}{\small{Source - \url{https://j15h.nu/source/attendance}}}
-
-    \cvline{}{\textbf{Unicalbot}}
-    \cvline{}{\small A bot that checks for notifications and exam results from University of Calicut website and tweets about it.}
-    \cvline{}{\small{Source - \url{https://j15h.nu/source/unical}}}
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Languages / APIs / Tools:}{ Javascript, Python, PHP, MySQL, HTML/HTML5, CSS/CSS3, SCSS, Shell Scripting, Node, Less, MongoDB} \\ \vspace{3pt}
+        \textbf{Languages / APIs / Tools - Familiar:}{ C, C++, Android app development, Lua, Objective C, iOS app development, Java, Debian packaging, Arch Linux packaging} \\ \vspace{3pt}
+        \textbf{Frameworks / Libraries:}{ Flask, React, React-Native, Redux, Webpack, Vue.js, Backbone.js, GameClosure, Memcached, Mocha.js, jsio, Express.js, AngularJS, Babel, Amazon Alexa, Drupal, Wordpress, Ghost, Codeigniter} \\ \vspace{3pt}
+        \textbf{Platforms}{ GNU/Linux (Arch Linux, Debian \& Ubuntu), AWS, Heroku, OpenShift, Google Cloud, Android, iOS} \\ \vspace{3pt}
+        \textbf{Version Control:}{ Git, Subversion, bzr}
+    }}
+  \resumeSubHeadingListEnd
 
 
-    \cvline{}{\textbf{Blender Add-Ons}}
-    \cvline{}{\small Developed a set of blender add-ons for architects.}
-    \cvline{}{\small{Source - \url{https://j15h.nu/source/wall}, \url{https://j15h.nu/source/library}}}
 
-    \cvline{}{\textbf{Publish Your Bookmarks}}
-    \cvline{}{\small Simple tool to publish Firefox bookmarks as a webpage.}
-    \cvline{}{\small{Source - \url{https://j15h.nu/source/bookmark}}}
+%----------- WORK EXPERIENCE -----------
 
-\pagebreak
-\section{Noteworthy Free/Libre/OpenSource Software Contributions}
-    \cvline{LibIndic (Silpa)}{\small{\url{http://libindic.org}}}
-    \cvline{jquery.i18n}{\small{\url{https://github.com/wikimedia/jquery.i18n}}}
-    \cvline{jquery.ime}{\small{\url{https://github.com/wikimedia/jquery.ime}}}
-    \cvline{Game Closure}{\small{\url{https://github.com/gameclosure/devkit}}}
-    \cvline{CyanogenMod / LineageOS}{\small{\url{http://www.lineageos.org/}}}
-    \cvline{GNOME Localization}{\small{\url{http://l10n.gnome.org}}}
-    \cvline{SMC Fonts}{\small{\url{https://github.com/smc/fonts}}}
-    \cvline{}{More list of projects can be found at \url{https://j15h.nu}}
+\section{Work Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Forma (Formerly known as Twic)}{Fremont, CA - Remote from India}
+      {Staff Software Engineer}{2019 April \textbf{--} Present, Full-time}
+        \resumeItemListStart
+           \resumeItem{Fintech product on Employee benefits space.}
+           \resumeItem{Implemented SAML IdP and configure SSO with third party service providers.}
+           \resumeItem{Key role in standardizing code quality, coding standards and developer tools to enforce the standards.}
+           \resumeItem{React based frontend work on employee portal and several internal frontend and backend projects.}
+           \resumeItem{Picked up features, worked on design documents, test plan, backend code work, frontend code and managed till deployment and testing.}
+           \resumeItem{Worked on all parts of the code base, company wide.}
+           \resumeItem{Worked on Google Cloud App engine, Firebase, AWS ElasticBeanstalk.}
+           \resumeItem{Worked on backend infrastructure and possibility of having VPC and VPN interconnecting Google Cloud, AWS and Mongo Atlas.}
+           \resumeItem{Built initial version of React native based mobile app.}
+           \resumeItem{SCIM implementation to support Microsoft azure active directiores.}
+        \resumeItemListEnd
 
-\section{Activities \& Achievements}
-    \cvline{*}{Received 2018 \textbf{MOSS (Mozilla Open Source Support) Award} for my Indic Keyboard work. }
-    \cvline{*}{\textbf{Google Summer of Code} (GSOC) Mentor - For the years 2013, 2014 and 2016. }
-    \cvline{*}{\textbf{SMS Attendance} and \textbf{Indic Keyboard} featured on national dailies, Deccan Chronicle, The Hindu, Times of India, Indian Express, The Economic Times, Malayala Manorama, Deshabhimani and Mathrubhumi.}
-    \cvline{*}{\textbf{Indic Keyboard} ranked \#1 in India, Saudi Arabia and UAE on top new free tools list.}
-    \cvline{*}{DeskWiki was one of the 50 selected applications in the \textbf{Ubuntu App Showdown} contest.}
-    \cvline{*}{Yourstory.com wrote a profile on their techie tuesdays column - \small{\url{https://yourstory.com/2017/03/techie-tuesdays-jishnu-mohan/}}}
+    \resumeSubheading
+      {Tarobites}{San Francisco, CA - Remote from India}
+      {Software Engineer}{2016 Dec \textbf{--} 2019 Mar}
+        \resumeItemListStart
+          \resumeItem{Worked on tarobites.com customer facing website, backend APIs, chef web interface, admin web interface and mobile apps.}
+          \resumeItem{Food tech company based in bay area.}
+          \resumeItem{Was working on initial versions of the frontend with Angular.JS}
+          \resumeItem{Lead role in fully rewrite of cosumer facing frontend with React.JS}
+          \resumeItem{Worked on key internal projects, backend, operations help and frontend code.}
+          \resumeItem{Worked on all parts of the code base, company wide.}
+        \resumeItemListEnd
 
-\section{Blogs \& Social Media}
-    \cvline{Home Page}{\url{https://j15h.nu}}
-    \cvline{Github}{\url{https://github.com/jishnu7}}
-    \cvline{Gitlab}{\url{https://gitlab.com/jishnu7}}
-%    \cvline{Behance}{\url{https://www.behance.net/jishnu7}}
-    \cvline{Medium}{\url{https://medium.com/@jishnu7}}
-    \cvline{Personal/tech}{\url{https://blog.j15h.nu}}
+    \resumeSubheading{Hashcube Technologies}{Bangalore, India}{Senior Software Engineer \& Team Lead}{2012 Nov - 2016-Dec}
+      \resumeItemListStart
+        \resumeItem{Built \#1 Sudoku game - Sudoku Quest on Facebook platform with PHP based backend, Backbone.JS based frontend}
+        \resumeItem{Handled deployment of games on company's own managed server on AWS.}
+        \resumeItem{Worked on Dotgame, another popular game from the company - handled UI rewrite and player rankings.}
+        \resumeItem{Built mobile versions of the games with GameClosure engine.}
+        \resumeItem{Managed release processes on both Android and iOS.}
+        \resumeItem{Contributed bugfixes and features back to the open source GameClosure game engine.}
+        \resumeItem{Created native modules for iOS and android with Objective-C and Java with native APIs.}
+        \resumeItem{Improved performance of the games on low RAM devices with code written on C/C++ and Javascript code optimization.}
+        \resumeItem{Lead engineering team and key decision making role for the new game Gummy Pop.}
+        \resumeItem{Managed engineering team of 8 people.}
+        \resumeItem{Worked on Alexa skill with python based backend and AWS ElasticBeanstalk.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Accel Frontline (Ushus Tech Division)}{Kochi, Kerala}{Software Engineering Trainee}{2012 April - 2012 Oct}
+      %\resumeItemListStart
+      %\resumeItem{DLNA Media Player: Goal of the project was to build an android media player with the support for DLNA streaming. Worked as software developer in this project.}
+      %\resumeItem{Pulse Audio: Worked as software developer to cross compile pulse audio for a proprietary embedded device.}
+      %\resumeItemListEnd
+    \resumeSubheading{Ubiqurio}{Kochi, Kerala}{Software Engineer}{2011 Aug - 2012 Feb}
+
+  \resumeSubHeadingListEnd
+
+%----------- AWARDS & ACHIEVEMENTS -----------
+
+
+\vspace{5pt}
+\section{Awards \& Achievements}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{2018 MOSS (Mozilla Open Source Support) Award:}{ Awarded my work on the project Indic Keyboard.}
+        \\ \vspace{3pt}
+        \textbf{Google Summer of Code:} { been a mentor for the years 2013, 2014 and 2016. }
+        \\ \vspace{3pt}
+        \textbf{SMS Attendance and Indic Keyboard featured in national media: } { Projects got featured on national dailies and online medias - Deccan Chronicle, The Hindu, Times of India, Indian Express, The Economic Times, Malayala Manorama, Deshabhimani, Mathrubhumi and Medianama.}
+        \\ \vspace{3pt}
+        \textbf{Indic Keyboard ranked \#1 on Google Play Store:} { On launch, the app was ranked \#1 in India, Saudi Arabia and UAE on top new free tools list.}
+        \\ \vspace{3pt}
+        \textbf{Ubuntu App Showdown:} { DeskWiki project was one of the 50 selected applications in the Ubuntu App Showdown contest.}
+        \\ \vspace{3pt}
+        \textbf{Yourstory.com article:} {Yourstory wrote a profile on me in their techie tuesdays column -\link{https://yourstory.com/2017/03/techie-tuesdays-jishnu-mohan/}{Link}}
+        \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+    \vspace{3pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Indic Keyboard} $|$ \link{https://indic.app}{Website} \link{https://j15h.nu/source/keyboard}{Source}}{}
+        \item{\small Mozilla Open Source Support Award (MOSS) winning Indian language input method for Android devices with more than \textbf{3 Million} downloads.
+      }
+      \resumeProjectHeading
+        {\textbf{Yet Another 2048} $|$\link{https://j15h.nu/2048}{Web} \link{https://j15h.nu/source/2048}{Source}}{}
+        \item{\small Popular web based puzzle game 2048, re-written and optimized for mobile.}
+
+      \resumeProjectHeading
+        {\textbf{DeskWiki Editor} $|$ \link{https://j15h.nu/source/wiki}{Source}}{}
+        \item{\small A desktop client to edit MediaWiki websites.}
+
+      %\resumeProjectHeading
+        %{\textbf{AppRank.in} $|$ \link{https://apprank.in}{Website}}{}
+        %\item{\small A website which tracks Google Play app rankings.}
+
+      \resumeProjectHeading
+        {\textbf{SMS Attendance} $|$ \link{https://j15h.nu/source/attendance}{Source}}{}
+        \item{\small Daily attendance SMS alert for MES College of Engineering students. During the period when project was active, it had more than 2300 registered users (out of 2700 students).}
+
+      \resumeProjectHeading
+        {\textbf{Unicalbot} $|$ \link{https://j15h.nu/source/unical}{Source}}{}
+        \item{\small A bot that checks for notifications and exam results from University of Calicut website and tweets about it.}
+
+
+      %\resumeProjectHeading
+        %{\textbf{Blender Add-Ons} $|$ \link{https://j15h.nu/source/wall}{Source}, \link{https://j15h.nu/source/library}{Source}}{}
+        %\item{\small Developed a set of blender add-ons for architects.}
+
+      %\resumeProjectHeading
+        %{\textbf{Publish Your Bookmarks} $|$ \link{https://j15h.nu/source/bookmark}{Source}}{}
+        %\item{\small Simple tool to publish Firefox bookmarks as a webpage.}
+
+    \resumeSubHeadingListEnd
+
+\section{Free \& Open Source Software Contributions}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+\item{
+      \projectlink{http://libindic.org}{LibIndic (Silpa)},
+      \projectlink{https://github.com/wikimedia/jquery.i18n}{jquery.i18n},
+      \projectlink{https://github.com/wikimedia/jquery.ime}{jquery.ime},
+      \projectlink{https://github.com/gameclosure/devkit}{Game Closure}, 
+      \projectlink{http://www.lineageos.org/}{CyanogenMod / LineageOS}, 
+      \projectlink{http://l10n.gnome.org}{GNOME Localization}, 
+      \projectlink{https://github.com/smc/fonts}{SMC Fonts},
+      \projectlink{https://j15h.nu}{More at https://j15h.nu}
+  }
+  \resumeSubHeadingListEnd
+
+\updateinfo
 
 \end{document}
