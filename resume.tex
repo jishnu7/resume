@@ -10,11 +10,20 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Jishnu Mohan - Resume},
+  pdfauthor={Jishnu Mohan},
+  pdfsubject={Resume},
+  pdfkeywords={Staff Software Engineer, Full-Stack, JavaScript, React, Node.js, Python, Go, AWS, Google Cloud, Shopify, Salesforce, Stripe, SAML, SCIM}
+}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
+\usepackage{accsupp}
+\newcommand{\atsicon}[2]{\BeginAccSupp{ActualText=#2}#1\EndAccSupp{}}
+\newcommand{\atshref}[2]{\href{#1}{\BeginAccSupp{ActualText={#1}}#2\EndAccSupp{}}}
 %\input{glyphtounicode}
 
 
@@ -122,13 +131,9 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\link}[2]{
-  \emph{\href{#1}{\color{blue}#2}}
-}
+\newcommand{\link}[2]{\href{#1}{\BeginAccSupp{ActualText={#1}}\color{blue}#2\EndAccSupp{}}}
 
-\newcommand{\projectlink}[2]{
-  \href{#1}{#2}
-}
+\newcommand{\projectlink}[2]{\href{#1}{\BeginAccSupp{ActualText={#1}}#2\EndAccSupp{}}}
 
 \newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize\color{gray}Last updated on #1}}
 
@@ -143,17 +148,28 @@
 \begin{center}
     \textbf{\Huge \sffamily\mdseries\upshape Jishnu Mohan} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:9895868518}{+91 9895 868 518}
+    \atsicon{\faMobile}{Phone:} \hspace{.5pt} \href{tel:9895868518}{+91 9895 868 518}
     $|$
-    \faAt \hspace{.5pt} \href{mailto:jishnu7@gmail.com}{jishnu7@gmail.com}
+    \atsicon{\faAt}{Email:} \hspace{.5pt} \href{mailto:jishnu7@gmail.com}{jishnu7@gmail.com}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/jishnu7}{LinkedIn}
+    \atsicon{\faLinkedinSquare}{LinkedIn:} \hspace{.5pt} \atshref{https://www.linkedin.com/in/jishnu7}{LinkedIn}
     $|$
-    \faGithub \hspace{.5pt} \href{https://github.com/jishnu7}{GitHub}
+    \atsicon{\faGithub}{GitHub:} \hspace{.5pt} \atshref{https://github.com/jishnu7}{GitHub}
     $|$
-    \faGlobe \hspace{.5pt} \href{https://j15h.nu}{Portfolio}
+    \atsicon{\faGlobe}{Web:} \hspace{.5pt} \atshref{https://j15h.nu}{Portfolio}
 \end{center}
 
+
+
+%----------- SUMMARY -----------
+
+\section{Summary}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+      Staff software engineer with \the\numexpr\year-2011\relax+ years building scalable web and mobile products across e-commerce, fintech, food-tech, and gaming. An early engineer at multiple startups, shaping products from inception through growth, with full-stack expertise across JavaScript, React, Node, Python, Go, AWS, and Google Cloud. Mozilla MOSS Award recipient and four-time Google Summer of Code mentor.
+    }}
+  \resumeSubHeadingListEnd
 
 
 %----------- SKILLS -----------
@@ -162,11 +178,13 @@
   \vspace{2pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Languages / APIs / Tools:}{ JavaScript, Python, PHP, MySQL, HTML/HTML5, CSS/CSS3, SCSS, Node, Less, MongoDB, Go, Shell Scripting} \\ \vspace{3pt}
-        \textbf{Languages / APIs / Tools - Familiar:}{ C, C++, Android app development, Lua, Objective-C, iOS app development, Java, Debian packaging, Arch Linux packaging} \\ \vspace{3pt}
-        \textbf{Frameworks / Libraries:}{ Flask, React, React-Native, Redux, Webpack, Vue.js, Backbone.js, GameClosure, Memcached, Mocha.js, jsio, Express.js, AngularJS, Babel, Amazon Alexa, Drupal, Wordpress, Ghost, Codeigniter} \\ \vspace{3pt}
-        \textbf{Platforms:}{ GNU/Linux (Arch Linux, Debian \& Ubuntu), AWS, Heroku, OpenShift, Google Cloud, Android, iOS} \\ \vspace{3pt}
-        \textbf{Version Control:}{ Git, Subversion, bzr} \\ \vspace{3pt}
+        \textbf{Languages:}{ JavaScript, Python, PHP, Go, HTML, CSS, SCSS, Less, Shell scripting} \\ \vspace{3pt}
+        \textbf{Additional languages:}{ C, C++, Java, Objective-C, Lua} \\ \vspace{3pt}
+        \textbf{Frameworks \& Libraries:}{ React, React Native, Redux, Node.js, Express.js, AngularJS, Vue.js, Backbone.js, Flask, Webpack, Babel, Mocha.js, GameClosure, Drupal, WordPress, Ghost, Codeigniter} \\ \vspace{3pt}
+        \textbf{Databases:}{ MySQL, MongoDB, Memcached} \\ \vspace{3pt}
+        \textbf{Cloud \& Platforms:}{ AWS, Google Cloud, Heroku, OpenShift, Android, iOS, GNU/Linux (Arch, Debian, Ubuntu)} \\ \vspace{3pt}
+        \textbf{Integrations:}{ Shopify, Salesforce Commerce Cloud, Stripe, Twilio, Amazon Alexa, SAML, SCIM} \\ \vspace{3pt}
+        \textbf{Tools:}{ Git, Subversion, Debian \& Arch Linux packaging} \\ \vspace{3pt}
         \textbf{Authoring \& Graphics:}{ \LaTeX, LibreOffice, GIMP, Inkscape, Blender}
     }}
   \resumeSubHeadingListEnd
@@ -180,7 +198,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Narvar}{Bangalore, India}
-      {Senior Software Engineer II}{2024 April \textbf{--} Present}
+      {Senior Software Engineer II}{April 2024 \textbf{--} Present}
         \resumeItemListStart
            \resumeItem{Lead engineering on the product recommendations track, partnering with the AI/ML team to deliver personalized recommendations across retailer storefronts.}
            \resumeItem{Build Shopify Checkout and theme app extensions that retailer clients install directly on their storefronts.}
@@ -190,8 +208,8 @@
         \resumeItemListEnd
 
     \resumeSubheading
-      {Forma (Formerly known as Twic)}{Fremont, CA - Remote from India}
-      {Staff Software Engineer}{2019 April \textbf{--} 2024 Feb}
+      {Forma (formerly Twic)}{Fremont, CA (Remote, India)}
+      {Staff Software Engineer}{April 2019 \textbf{--} February 2024}
         \resumeItemListStart
            \resumeItem{Drove engineering on a fintech employee-benefits product; architected new features and mentored developers across the team.}
            \resumeItem{Established organization-wide code standards, contribution guidelines, and enforcement tooling.}
@@ -204,15 +222,15 @@
         \resumeItemListEnd
 
     \resumeSubheading
-      {Tarobites}{San Francisco, CA - Remote from India}
-      {Software Engineer}{2016 Dec \textbf{--} 2019 Mar}
+      {Tarobites}{San Francisco, CA (Remote, India)}
+      {Software Engineer}{December 2016 \textbf{--} March 2019}
         \resumeItemListStart
           \resumeItem{Engineered the customer-facing website, backend APIs, chef portal, admin portal, and mobile apps for a Bay Area food-tech startup.}
           \resumeItem{Built the initial AngularJS frontend and led the subsequent rewrite to React.}
           \resumeItem{Contributed across the full stack --- backend, frontend, and operations --- and mentored junior engineers.}
         \resumeItemListEnd
 
-    \resumeSubheading{Hashcube Technologies}{Bangalore, India}{Senior Software Engineer \& Team Lead}{2012 Nov \textbf{--} 2016 Dec}
+    \resumeSubheading{Hashcube Technologies}{Bangalore, India}{Senior Software Engineer \& Team Lead}{November 2012 \textbf{--} December 2016}
       \resumeItemListStart
         \resumeItem{Built Sudoku Quest, the \#1 Sudoku game on Facebook, with a PHP backend and Backbone.js frontend deployed on AWS.}
         \resumeItem{Led UI rewrite and player-ranking work on Dotgame; led engineering on Gummy Pop and managed a team of eight.}
@@ -221,12 +239,12 @@
         \resumeItem{Built an Alexa skill with a Python backend on AWS Elastic Beanstalk.}
       \resumeItemListEnd
 
-    \resumeSubheading{Accel Frontline - Ushus Tech}{Kochi, Kerala}{Software Engineering Trainee}{2012 April \textbf{--} 2012 Oct}
+    \resumeSubheading{Accel Frontline - Ushus Tech}{Kochi, Kerala}{Software Engineering Trainee}{April 2012 \textbf{--} October 2012}
       \resumeItemListStart
       \resumeItem{Built an Android media player with DLNA streaming support.}
       \resumeItem{Cross-compiled Linux PulseAudio for a proprietary embedded device.}
       \resumeItemListEnd
-    \resumeSubheading{Ubiqurio}{Kochi, Kerala}{Software Engineer}{2011 Aug \textbf{--} 2012 Feb}
+    \resumeSubheading{Ubiqurio}{Kochi, Kerala}{Software Engineer}{August 2011 \textbf{--} February 2012}
       \resumeItemListStart
       \resumeItem{Delivered multiple website frontend and backend projects in PHP and JavaScript.}
       \resumeItemListEnd
@@ -268,7 +286,7 @@
       \resumeProjectInline{Blender Add-Ons}{Set of Blender add-ons for architects. \link{https://github.com/jishnu7/Solid-Wall}{Solid Wall}, \link{https://github.com/jishnu7/Integrated-Library}{Integrated Library}}
     \resumeSubHeadingListEnd
 
-\section{Free \& Open Source Software Contributions}
+\section{Open Source Contributions}
   \vspace{2pt}
   \resumeSubHeadingListStart
 \item{
@@ -290,9 +308,8 @@
   \vspace{3pt}
   \resumeSubHeadingListStart
     \resumeEducationHeading
-      {MES College of Engineering
-      }{University of Calicut, Kerala, India}
-      {Bachelor's degree in Information Technology}{2007 \textbf{--} 2011}
+      {MES College of Engineering, University of Calicut}{Kerala, India}
+      {Bachelor's degree in Information Technology}{2007 to 2011}
       \resumeSubHeadingListEnd
 
 
