@@ -100,6 +100,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeProjectInline}[2]{%
+    \item\small\textbf{#1} --- #2\vspace{-3pt}%
+}
+
 
 \newcommand{\resumeOrganizationHeading}[4]{
   \vspace{-2pt}\item
@@ -188,20 +192,14 @@
       {Forma (Formerly known as Twic)}{Fremont, CA - Remote from India}
       {Staff Software Engineer}{2019 April \textbf{--} 2024 Feb}
         \resumeItemListStart
-           \resumeItem{Fintech product on Employee benefits space.}
-           \resumeItem{Key part in defining code standards, crafting code guidelines, and supplying developers with tools to enforce them.}
-           \resumeItem{I picked up features from the product management team, engaged in the development of architecture documents, test strategies, backend code work, frontend code, and supervised the entire process until deployment and testing were completed.}
-           \resumeItem{Have been responsible for working on all aspects of the code base, spanning across the entire company.}
-           \resumeItem{React based frontend work on employee portal and several internal frontend and backend projects.}
-           \resumeItem{Worked on Google Cloud App engine, Cloud Functions, Firebase, AWS ElasticBeanstalk.}
-           \resumeItem{Implemented SAML IdP and configured SSO with third-party service providers.}
-           \resumeItem{Worked on backend infrastructure and the possibility of having a VPC and VPN interconnecting Google Cloud, AWS and MongoDB Atlas.}
+           \resumeItem{Fintech product in the employee benefits space; key role in architecting new features and providing guidance to the developer team.}
+           \resumeItem{Defined code standards and guidelines, and built tooling for developers to enforce them.}
+           \resumeItem{Owned features end-to-end from product intake through architecture, backend, frontend, deployment and testing across the entire codebase.}
+           \resumeItem{React-based work on the employee portal and several internal frontend and backend projects.}
+           \resumeItem{Worked on Google Cloud App Engine, Cloud Functions, Firebase and AWS Elastic Beanstalk; designed VPC/VPN interconnects across Google Cloud, AWS and MongoDB Atlas.}
+           \resumeItem{Implemented SAML IdP and configured SSO with third-party providers; SCIM support for Microsoft Azure Active Directory.}
            \resumeItem{Initiated and rewrote the Angular-based mobile app in React Native.}
-           \resumeItem{SCIM implementation to support Microsoft Azure Active Directory.}
-           \resumeItem{Twilio based SMS handling.}
-           \resumeItem{Built physical and virtual debit card issuance and transaction handling with Stripe.}
-           \resumeItem{Key role in architecting new features.}
-           \resumeItem{Providing guidance to developer team.}
+           \resumeItem{Built physical and virtual debit card issuance and transaction handling with Stripe; Twilio-based SMS handling.}
         \resumeItemListEnd
 
     \resumeSubheading
@@ -209,27 +207,18 @@
       {Software Engineer}{2016 Dec \textbf{--} 2019 Mar}
         \resumeItemListStart
           \resumeItem{Food tech product based in the Bay Area, California.}
-          \resumeItem{Worked on tarobites.com customer facing website, backend APIs, chef web interface, admin web interface and mobile apps.}
-          \resumeItem{Started with initial versions of the frontend with AngularJS.}
-          \resumeItem{Lead role in rewriting the consumer facing frontend with React.JS.}
-          \resumeItem{I helped with important internal projects, including the backend, operations help, and frontend code.}
-          \resumeItem{Tackled all aspects of the code base, spanning the entire organization.}
-          \resumeItem{Mentored junior developers.}
+          \resumeItem{Worked on tarobites.com customer-facing website, backend APIs, chef web interface, admin web interface and mobile apps.}
+          \resumeItem{Built the initial AngularJS frontend, then led the rewrite to React.}
+          \resumeItem{Worked across the entire codebase --- backend, frontend and operations --- and mentored junior developers.}
         \resumeItemListEnd
 
     \resumeSubheading{Hashcube Technologies}{Bangalore, India}{Senior Software Engineer \& Team Lead}{2012 Nov \textbf{--} 2016 Dec}
       \resumeItemListStart
-        \resumeItem{Built the \#1 Sudoku game - Sudoku Quest on the Facebook platform with a PHP-based backend and Backbone.js-based frontend.}
-        \resumeItem{Handled deployment of games on company's own managed server on AWS.}
-        \resumeItem{Worked on Dotgame, another popular game from the company - handled UI rewrite and player rankings.}
-        \resumeItem{Key contribution in building mobile versions of the games with GameClosure 2D engine.}
-        \resumeItem{Managed release processes on both Android and iOS app stores.}
-        \resumeItem{Contributed bugfixes and features back to the open source GameClosure game engine.}
-        \resumeItem{Created native modules for iOS and Android with Objective-C and Java with native APIs.}
-        \resumeItem{Improved performance of the games on low RAM devices with code written on C/C++ and Javascript code optimization.}
-        \resumeItem{Lead engineering team and key decision making role for the new game Gummy Pop.}
-        \resumeItem{Supervised an engineering team of eight people.}
-        \resumeItem{Worked on an Alexa skill with a Python-based backend and AWS Elastic Beanstalk.}
+        \resumeItem{Built the \#1 Sudoku game --- Sudoku Quest --- on Facebook with a PHP backend and Backbone.js frontend; handled deployment on AWS.}
+        \resumeItem{Worked on Dotgame --- handled UI rewrite and player rankings --- and led engineering on the new game Gummy Pop, supervising a team of eight.}
+        \resumeItem{Built mobile versions with the GameClosure 2D engine; created native iOS/Android modules in Objective-C and Java, and contributed bugfixes and features upstream.}
+        \resumeItem{Managed release processes on the Android and iOS app stores; optimized performance for low-RAM devices via C/C++ and JavaScript tuning.}
+        \resumeItem{Built an Alexa skill with a Python backend on AWS Elastic Beanstalk.}
       \resumeItemListEnd
 
     \resumeSubheading{Accel Frontline - Ushus Tech}{Kochi, Kerala}{Software Engineering Trainee}{2012 April \textbf{--} 2012 Oct}
@@ -246,8 +235,6 @@
 
 %----------- AWARDS & ACHIEVEMENTS -----------
 
-\pagebreak
-\vspace{5pt}
 \section{Awards \& Achievements}
   \vspace{2pt}
   \resumeSubHeadingListStart
@@ -273,39 +260,11 @@
 \section{Projects}
     \vspace{3pt}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-        {\textbf{Indic Keyboard} $|$ \link{https://indic.app}{Website} \link{https://j15h.nu/source/keyboard}{Source}}{}
-        \item{\small Mozilla Open Source Support Award (MOSS) winning Indian language input method for Android devices with more than \textbf{3 Million} downloads.
-      }
-      \resumeProjectHeading
-        {\textbf{Yet Another 2048} $|$\link{https://j15h.nu/2048}{Web} \link{https://j15h.nu/source/2048}{Source}}{}
-        \item{\small Popular web based puzzle game 2048, re-written and optimized for mobile.}
-
-      \resumeProjectHeading
-        {\textbf{DeskWiki Editor} $|$ \link{https://j15h.nu/source/wiki}{Source}}{}
-        \item{\small A desktop client to edit MediaWiki websites.}
-
-      %\resumeProjectHeading
-        %{\textbf{AppRank.in} $|$ \link{https://apprank.in}{Website}}{}
-        %\item{\small A website which tracks Google Play app rankings.}
-
-      \resumeProjectHeading
-        {\textbf{SMS Attendance} $|$ \link{https://j15h.nu/source/attendance}{Source}}{}
-        \item{\small Daily attendance SMS alert for MES College of Engineering students. During the period when project was active, it had more than 2300 registered users (85\% students in the college).}
-
-      \resumeProjectHeading
-        {\textbf{Unicalbot} $|$ \link{https://j15h.nu/source/unical}{Source}}{}
-        \item{\small A bot that checks the university website for updates and exam results and shares them on social media.}
-
-
-      %\resumeProjectHeading
-        %{\textbf{Blender Add-Ons} $|$ \link{https://j15h.nu/source/wall}{Source}, \link{https://j15h.nu/source/library}{Source}}{}
-        %\item{\small Developed a set of blender add-ons for architects.}
-
-      %\resumeProjectHeading
-        %{\textbf{Publish Your Bookmarks} $|$ \link{https://j15h.nu/source/bookmark}{Source}}{}
-        %\item{\small Simple tool to publish Firefox bookmarks as a webpage.}
-
+      \resumeProjectInline{Indic Keyboard}{MOSS Award-winning Indian language input method for Android with \textbf{3M+} downloads. \link{https://indic.app}{Website}, \link{https://j15h.nu/source/keyboard}{Source code}}
+      \resumeProjectInline{Yet Another 2048}{Popular web-based puzzle game 2048, rewritten and optimized for mobile. \link{https://j15h.nu/2048}{Web}, \link{https://j15h.nu/source/2048}{Source code}}
+      \resumeProjectInline{SMS Attendance}{Daily attendance SMS alerts for MES College of Engineering students; 2300+ registered users (85\% of the college) during its active period. \link{https://j15h.nu/source/attendance}{Source code}}
+      \resumeProjectInline{Unicalbot}{Bot that checks the university website for updates and exam results and shares them on social media. \link{https://j15h.nu/source/unical}{Source code}}
+      \resumeProjectInline{DeskWiki Editor}{Desktop client to edit MediaWiki websites. \link{https://j15h.nu/source/wiki}{Source code}}
     \resumeSubHeadingListEnd
 
 \section{Free \& Open Source Software Contributions}
