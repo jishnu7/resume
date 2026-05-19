@@ -11,6 +11,5 @@ http://j15h.nu/resume.pdf to see current build.
 
 ## MacOS
 - brew install basictex
-- sudo tlmgr install marvosym
-- sudo tlmgr install datenumber
-- sudo tlmgr install collection-fontsrecommended
+- sudo tlmgr update --self
+- sudo tlmgr install marvosym datenumber collection-fontsrecommended preprint titlesec enumitem hyphenat fontawesome
