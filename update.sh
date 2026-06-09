@@ -1,1 +1,1 @@
-scp resume.pdf jishnu@j15h.nu:/var/www/
+scp resume.pdf jishnu@j15h.nu:/var/www/home/
