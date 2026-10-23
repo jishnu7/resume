@@ -20,11 +20,10 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{hyphenat}
-\usepackage{fontawesome}
 \usepackage{accsupp}
 \newcommand{\atsicon}[2]{\BeginAccSupp{ActualText=#2}#1\EndAccSupp{}}
 \newcommand{\atshref}[2]{\href{#1}{\BeginAccSupp{ActualText={#1}}#2\EndAccSupp{}}}
-%\input{glyphtounicode}
+\input{glyphtounicode}
 
 
 %---------- FONT OPTIONS ----------
@@ -42,6 +41,7 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
+\setlength{\footskip}{14pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -145,17 +145,17 @@
 
 \begin{center}
     \textbf{\Huge \sffamily\mdseries\upshape Jishnu Mohan} \\ \vspace{3pt}
-    {\normalsize Staff Software Engineer \textbullet{} Full-Stack} \\ \vspace{4pt}
+    {\normalsize Staff Software Engineer \textbar{} Full-Stack} \\ \vspace{4pt}
     \small
-    \atsicon{\faMobile}{Phone:} \hspace{.5pt} \href{tel:9895868518}{+91 9895 868 518}
+    Phone: \hspace{.5pt} \href{tel:9895868518}{+91 9895 868 518}
     $|$
-    \atsicon{\faAt}{Email:} \hspace{.5pt} \href{mailto:jishnu7@gmail.com}{jishnu7@gmail.com}
+    Email: \hspace{.5pt} \href{mailto:jishnu7@gmail.com}{jishnu7@gmail.com}
     $|$
-    \atsicon{\faLinkedinSquare}{LinkedIn:} \hspace{.5pt} \atshref{https://www.linkedin.com/in/jishnu7}{LinkedIn}
+    \atshref{https://www.linkedin.com/in/jishnu7}{LinkedIn}
     $|$
-    \atsicon{\faGithub}{GitHub:} \hspace{.5pt} \atshref{https://github.com/jishnu7}{GitHub}
+    \atshref{https://github.com/jishnu7}{GitHub}
     $|$
-    \atsicon{\faGlobe}{Web:} \hspace{.5pt} \atshref{https://j15h.nu}{Portfolio}
+    \atshref{https://j15h.nu}{Portfolio}
 \end{center}
 
 
@@ -166,27 +166,9 @@
   \vspace{2pt}
   \resumeSubHeadingListStart
     \small{\item{
-      Staff software engineer with \the\numexpr\year-2011\relax{} years building high-traffic consumer web and mobile products across e-commerce, fintech, and gaming. Early engineer at multiple startups, shipping products from zero to production. Works across the stack, Go and Node.js backends, React/TypeScript front-ends, and microservices on AWS and Google Cloud. Built Indic Keyboard (5M+ downloads, Mozilla MOSS Award), four-time Google Summer of Code mentor.
+      Staff software engineer with \the\numexpr\year-2011\relax{} years building high-traffic consumer web and mobile products across e-commerce, fintech, and gaming. Early engineer at multiple startups, shipping products from zero to production. Works across the stack, Go and Node.js backends, React/TypeScript front-ends, and microservices on AWS and Google Cloud. Built Indic Keyboard (6M+ downloads, Mozilla MOSS Award), four-time Google Summer of Code mentor.
     }}
   \resumeSubHeadingListEnd
-
-
-%----------- SKILLS -----------
-
-\section{Skills}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{Languages:}{ JavaScript, TypeScript, Python, Go, PHP, HTML, CSS, SCSS, Less, Shell scripting; also C, C++, Java, Objective-C} \\ \vspace{2pt}
-        \textbf{Frameworks \& Libraries:}{ React, React Native, Redux, Node.js, Express.js, AngularJS, Vue.js, Backbone.js, Flask, Webpack, Babel, npm, Mocha.js, GameClosure} \\ \vspace{2pt}
-        \textbf{Databases:}{ MySQL, PostgreSQL (SQL); MongoDB (NoSQL); Memcached} \\ \vspace{2pt}
-        \textbf{Cloud \& Platforms:}{ AWS, Google Cloud (GCP), Azure, Heroku, Android, iOS, GNU/Linux (Arch, Debian, Ubuntu)} \\ \vspace{2pt}
-        \textbf{Architecture \& Practices:}{ Microservices, REST APIs, CI/CD, SDK design, Terraform (IaC), monitoring \& reliability} \\ \vspace{2pt}
-        \textbf{Integrations:}{ Shopify, Salesforce Commerce Cloud, Stripe, Twilio, Amazon Alexa, SAML, SCIM} \\ \vspace{2pt}
-        \textbf{Tools:}{ Git, Debian \& Arch Linux packaging, LaTeX}
-    }}
-  \resumeSubHeadingListEnd
-
 
 
 %----------- WORK EXPERIENCE -----------
@@ -225,13 +207,13 @@
           \resumeItem{Contributed across the full stack --- backend, frontend, and operations --- and mentored junior engineers.}
         \resumeItemListEnd
 
+    \newpage
     \resumeSubheading{Hashcube Technologies}{Bangalore, India}{Senior Software Engineer \& Team Lead}{November 2012 - December 2016}
       \resumeItemListStart
         \resumeItem{Built Sudoku Quest, the \#1 Sudoku game on Facebook, with a PHP backend and Backbone.js frontend deployed on AWS.}
         \resumeItem{Led UI rewrite and player-ranking work on Dotgame; led engineering on Gummy Pop and managed a team of eight.}
         \resumeItem{Shipped mobile versions on the GameClosure 2D engine, authored native iOS/Android modules in Objective-C and Java, and upstreamed bugfixes and features to the engine.}
         \resumeItem{Owned Android and iOS app store release management; optimized performance on low-RAM devices through C/C++ and JavaScript profiling.}
-        \resumeItem{Built an Alexa skill with a Python backend on AWS Elastic Beanstalk.}
       \resumeItemListEnd
 
     \vspace{-2pt}\item
@@ -243,51 +225,29 @@
 
   \resumeSubHeadingListEnd
 
-%----------- AWARDS & ACHIEVEMENTS -----------
+%----------- SKILLS -----------
 
-\section{Awards \& Achievements}
+\section{Skills}
   \vspace{2pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Mozilla Open Source Support (MOSS) Award, 2018:} {Awarded by Mozilla for contributions to Indic Keyboard.}
-        \\ \vspace{3pt}
-        \textbf{Google Summer of Code:} {Mentor in 2013, 2014, 2016, and 2024.}
-        \\ \vspace{3pt}
-        \textbf{National media coverage:} {Indic Keyboard and SMS Attendance featured in national media --- The Hindu, Times of India, The Economic Times, and others.}
-        \\ \vspace{3pt}
-        \textbf{Indic Keyboard \#1 on Google Play Store:} {Ranked \#1 in India, Saudi Arabia, and UAE in Top New Free Tools at launch.}
-        \\ \vspace{3pt}
-        \textbf{Ubuntu App Showdown:} {DeskWiki selected among the top 50 applications in the contest.}
-        \\ \vspace{3pt}
-        \textbf{YourStory feature:} {Profiled in YourStory's Techie Tuesdays column. \link{https://yourstory.com/2017/03/techie-tuesdays-jishnu-mohan/}{Link}}
-        \\ \vspace{3pt}
+        \textbf{Frontend:}{ TypeScript, JavaScript, React, React Native, Redux, HTML/CSS, SDK design} \\ \vspace{2pt}
+        \textbf{Backend \& Data:}{ Go, Node.js, Express.js, Python, REST APIs, microservices, PostgreSQL, MySQL, MongoDB} \\ \vspace{2pt}
+        \textbf{Infrastructure:}{ Google Cloud (GCP), AWS, Terraform, CI/CD, monitoring, performance \& reliability} \\ \vspace{2pt}
+        \textbf{Integrations:}{ Shopify, Salesforce Commerce Cloud (SFCC), Stripe, SAML, SCIM}
     }}
   \resumeSubHeadingListEnd
 
+%----------- OPEN SOURCE & RECOGNITION -----------
 
-%----------- PROJECTS -----------
-
-\section{Projects}
-    \vspace{3pt}
-    \resumeSubHeadingListStart
-      \resumeProjectInline{Indic Keyboard}{MOSS Award-winning Indian-language input method for Android with \textbf{3M+} downloads. \link{https://indic.app}{Website}, \link{https://j15h.nu/source/keyboard}{Source code}}
-      \resumeProjectInline{Yet Another 2048}{Mobile-optimized rewrite of the 2048 puzzle game. \link{https://j15h.nu/2048}{Web}, \link{https://j15h.nu/source/2048}{Source code}}
-      \resumeProjectInline{SMS Attendance}{Daily attendance SMS service for MES College of Engineering, reaching 2300+ students (85\% of the student body) during its active period. \link{https://j15h.nu/source/attendance}{Source code}}
-    \resumeSubHeadingListEnd
-
-\section{Open Source Contributions}
+\section{Open Source \& Recognition}
   \vspace{2pt}
   \resumeSubHeadingListStart
-\small{\item{
-      \href{http://libindic.org}{LibIndic (Silpa)},
-      \href{https://github.com/wikimedia/jquery.i18n}{jquery.i18n},
-      \href{https://github.com/wikimedia/jquery.ime}{jquery.ime},
-      \href{https://github.com/gameclosure/devkit}{Game Closure},
-      \href{https://github.com/hashcube/DevkitHelper}{DevkitHelper},
-      \href{http://www.lineageos.org/}{LineageOS (CyanogenMod)},
-      \href{http://l10n.gnome.org}{GNOME Localization},
-      \href{https://github.com/smc/fonts}{SMC Fonts} --- more at \href{https://j15h.nu}{j15h.nu}
-  }}
+    \resumeProjectInline{Indic Keyboard}{Built an Indian-language input method for Android with \textbf{6M+ downloads}; recipient of the \textbf{Mozilla Open Source Support (MOSS) Award, 2018}. \link{https://indic.app}{Website}, \link{https://j15h.nu/source/keyboard}{Source code}}
+    \resumeProjectInline{Google Summer of Code}{Four-time mentor: 2013, 2014, 2016, and 2024.}
+    \resumeProjectInline{GameClosure}{Contributed bugfixes and features to the open-source 2D game engine used for mobile game development. \link{https://github.com/gameclosure/devkit}{Source code}}
+    \resumeProjectInline{SMS Attendance}{Built a daily attendance SMS service reaching 2300+ students (85\% of the student body) at MES College of Engineering. \link{https://j15h.nu/source/attendance}{Source code}}
+    \resumeProjectInline{Media recognition}{Indic Keyboard and SMS Attendance featured in The Hindu, Times of India, and The Economic Times; profiled in YourStory's \link{https://yourstory.com/2017/03/techie-tuesdays-jishnu-mohan/}{Techie Tuesdays}.}
   \resumeSubHeadingListEnd
 
 %----------- EDUCATION -----------
